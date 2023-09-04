@@ -9,7 +9,9 @@ RUN cd /app && mvn clean package
 
 FROM azul/zulu-openjdk:11-latest
 
-RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+ARG JEMALLOC_VERSION=5.3.0
+
+RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && mkdir /async-profiler
 
@@ -17,12 +19,24 @@ RUN cd /async-profiler && \
     wget https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.9/async-profiler-2.9-linux-x64.tar.gz && \
     tar xvzf async-profiler-2.9-linux-x64.tar.gz
 
+
+RUN mkdir /jemalloc && \
+    cd /jemalloc && \
+    wget https://github.com/jemalloc/jemalloc/releases/download/${JEMALLOC_VERSION}/jemalloc-${JEMALLOC_VERSION}.tar.bz2 && \
+    bzip2 -d jemalloc-${JEMALLOC_VERSION}.tar.bz2 && \
+    tar -xvf jemalloc-${JEMALLOC_VERSION}.tar && \
+    cd jemalloc-${JEMALLOC_VERSION} && \
+    ./configure && \
+    make && \
+    make install
+
+
 COPY --from=builder /app/target/java-app-1.0-SNAPSHOT-jar-with-dependencies.jar /app/app.jar
 
-RUN echo "#/bin/bash" > /app/start.sh && \
-    echo "java -Xmx64m -Xlog:gc*=debug:file=/app/gc.log:time,uptimemillis,pid,tid,level,tags:filecount=5,filesize=100m -jar /app/app.jar " >> /app/start.sh && \
-    chmod +x /app/start.sh
+COPY entry.sh /app/entry.sh
+
+RUN chmod +x /app/entry.sh
 
 WORKDIR /app
-ENTRYPOINT [ "bash", "/app/start.sh" ]
+ENTRYPOINT [ "bash", "/app/entry.sh" ]
 

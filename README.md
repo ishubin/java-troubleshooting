@@ -2,8 +2,7 @@ Java Troubleshooting Tips
 ==========================
 
 
-- [Tread analysis](/Threads.md)
-- [CPU Profiling](/CPU-profiling.md)
-- [GC logs](/GC-logs.md)
+- [Thread analysis](/Threads.md)
+- [GC](/GC.md)
 - [Heap (memory) analysis](/Heap.md)
-
+- [CPU Profiling](/CPU-profiling.md)

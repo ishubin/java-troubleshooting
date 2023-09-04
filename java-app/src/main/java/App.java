@@ -1,27 +1,43 @@
 import spark.Request;
 import spark.Response;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
+import java.util.zip.DataFormatException;
+import java.util.zip.Deflater;
+import java.util.zip.Inflater;
 
 import static spark.Spark.get;
 import static spark.Spark.port;
 
 public class App {
 
-    public final static Map<String, String> data = new HashMap<>(){{
-        put("user.name", "Johny");
-    }};
     public static void main(String[] args) {
-        port(4050);
+        int listenPort = 4050;
+        port(listenPort);
         get("/hello", (req, res) -> "Hello World\n");
-        get("/heavy-task", App::heavyTask);
+        get("/cpu", App::heavyTask);
         get("/arr", App::humongousAllocation);
         get("/dead-lock", App::deadLock);
         get("/gc", App::runGC);
+        get("/decompressor", App::decompressor);
+
+        System.out.println("Listening on port " + listenPort);
     }
 
+
+    private static String decompressor(Request req, Response res) throws Exception {
+        int numMB = Integer.parseInt(req.queryParamOrDefault("size", "1"));
+        int loop = Integer.parseInt(req.queryParamOrDefault("loop", "1"));
+        int size = numMB * 1000_000;
+        for (int i = 0; i < loop; i++) {
+            String text = generateRandomString(size);
+            byte[] compressedBytes = compressString(text);
+            String decompressedText = decompressString(compressedBytes);
+        }
+        return "compressed and decompressed " + numMB + " MB " + loop + " times";
+    }
 
 
     private static String runGC(Request request, Response response) {
@@ -45,15 +61,24 @@ public class App {
         return "Generated " + num + " arrays of " + size + " bytes\n";
     }
 
-    public static Object heavyTask(Request req, Response res) {
-        int num = Integer.parseInt(req.queryParamOrDefault("num", "1000"));
-        int size = Integer.parseInt(req.queryParamOrDefault("size", "10"));
-
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < num; i++) {
-            result.append(generateRandomString(size));
+    public static String heavyTask(Request req, Response res) {
+        InputStream resourceStream = App.class.getResourceAsStream("some-test-file.txt");
+        if (resourceStream == null) {
+            throw new RuntimeException("Cannot find resource");
         }
-        return result.toString();
+
+        StringBuilder textBuilder = new StringBuilder();
+        try (Reader reader = new BufferedReader(new InputStreamReader
+                (resourceStream, StandardCharsets.UTF_8))) {
+            int c;
+            while ((c = reader.read()) != -1) {
+                textBuilder.append((char) c);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return textBuilder.toString();
     }
 
 
@@ -62,13 +87,39 @@ public class App {
         int rightLimit = 122; // letter 'z'
         Random random = new Random();
 
-        String generatedString = random.ints(leftLimit, rightLimit + 1)
+        return random.ints(leftLimit, rightLimit + 1)
                 .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
                 .limit(length)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
-
-        return generatedString;
     }
 
+    public static byte[] compressString(String text) throws UnsupportedEncodingException {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        Deflater deflater = new Deflater();
+        byte[] buffer = new byte[1024];
+        byte[] input = text.getBytes(StandardCharsets.UTF_8);
+
+        deflater.setInput(input);
+        deflater.finish();
+        while (!deflater.finished()) {
+            int count = deflater.deflate(buffer);
+            os.write(buffer, 0, count);
+        }
+        return os.toByteArray();
+    }
+
+    public static String decompressString(byte[] bytes) throws DataFormatException, UnsupportedEncodingException {
+        Inflater inflater = new Inflater();
+        inflater.setInput(bytes);
+        byte[] buffer = new byte[1024];
+
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+
+        while(!inflater.finished()) {
+            int len = inflater.inflate(buffer);
+            os.write(buffer, 0, len);
+        }
+        return os.toString(StandardCharsets.UTF_8);
+    }
 }

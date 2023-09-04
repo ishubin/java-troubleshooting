@@ -2,7 +2,12 @@ Threads analysis
 ====================
 
 ```
-jcmd 1 Thread.print
+jcmd $JAVA_PID Thread.print
+```
+
+or
+```
+jstack $JAVA_PID
 ```
 
 

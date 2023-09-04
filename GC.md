@@ -1,7 +1,16 @@
-GC Logs
+GC
 ===========
 
+GC utilization
+----------------
 
+```
+jstat -gcutil $JAVA_PID 1000
+```
+
+
+GC Logs
+------------------
 
 ##### Enable GC logs for Java 9+
 
