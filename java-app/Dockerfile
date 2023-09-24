@@ -10,6 +10,7 @@ RUN cd /app && mvn clean package
 FROM azul/zulu-openjdk:11-latest
 
 ARG JEMALLOC_VERSION=5.3.0
+ARG OTEL_AGENT_VERSION=1.29.0
 
 RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz && rm -rf /var/lib/apt/lists/*
 
@@ -30,6 +31,7 @@ RUN mkdir /jemalloc && \
     make && \
     make install
 
+RUN wget -O /opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OTEL_AGENT_VERSION}/opentelemetry-javaagent.jar
 
 COPY --from=builder /app/target/java-app-1.0-SNAPSHOT-jar-with-dependencies.jar /app/app.jar
 

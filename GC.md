@@ -20,7 +20,7 @@ Starting from Java version 9 the GC logs should be enabled using `-Xlog` option.
 java -Xmx64m -Xlog:gc*=debug:file=/app/gc.log:time,uptimemillis,pid,tid,level,tags:filecount=5,filesize=100m -jar /app/app.jar
 ```
 
-Once the logs are collected you can upload them on [GCEasy](https://gceasy.io/) (a useful online tool for Java GC logs analysis)
+Once the logs are collected you can upload them to [GCEasy](https://gceasy.io/) (a useful online tool for Java GC logs analysis). This is in-browser tool, which does not actually upload your logs to any server, but instead parses them on the client side and generates a report.
 
 
 

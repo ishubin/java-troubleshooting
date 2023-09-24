@@ -63,7 +63,7 @@ printf "%x\n" 32
 20
 ```
 
-Now you can take the heximal representation of thread id and search for it in thread dump:
+Now you can take the heximal representation of the thread id and search for it in the thread dump:
 
 ```
 jcmd 1 Thread.print | grep 'nid=0x20' -A 12

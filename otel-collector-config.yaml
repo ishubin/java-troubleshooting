@@ -1,0 +1,46 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4017
+      http:
+        endpoint: 0.0.0.0:4018
+
+exporters:
+  logging:
+    loglevel: debug
+
+  otlp:
+    endpoint: jaeger:4317
+    tls:
+      insecure_skip_verify: true
+      insecure: true
+
+  prometheusremotewrite:
+    endpoint: "http://prometheus:9090/api/v1/write"
+
+
+processors:
+  batch:
+    send_batch_size: 2048
+    timeout: 200ms
+
+service:
+  telemetry:
+    logs:
+      level: "INFO"
+
+  pipelines:
+    metrics:
+      receivers:
+        - otlp
+      exporters:
+        - prometheusremotewrite
+
+    traces:
+      receivers:
+        - otlp
+      processors:
+        - batch
+      exporters:
+        - otlp
