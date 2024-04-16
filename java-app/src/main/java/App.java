@@ -1,17 +1,28 @@
+import com.github.ishubin.javatroubleshooting.DLThread;
+import com.github.ishubin.javatroubleshooting.messaging.MessageConsumer;
+import com.github.ishubin.javatroubleshooting.messaging.DataQueue;
+import com.github.ishubin.javatroubleshooting.messaging.Message;
+import com.github.ishubin.javatroubleshooting.messaging.Producer;
+import com.github.ishubin.javatroubleshooting.threads.BlockingThread;
+import com.github.ishubin.javatroubleshooting.threads.WaitingThread;
 import spark.Request;
 import spark.Response;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-import static spark.Spark.get;
-import static spark.Spark.port;
+import static spark.Spark.*;
 
 public class App {
+
+    private static DataQueue dataQueue = new DataQueue(10000000);
+    private static Producer producer = new Producer(dataQueue);
+    private static MessageConsumer messageConsumer = new MessageConsumer(dataQueue, (message -> dataQueue.add(message)));
 
     public static void main(String[] args) {
         int listenPort = 4050;
@@ -19,11 +30,44 @@ public class App {
         get("/hello", (req, res) -> "Hello World\n");
         get("/cpu", App::heavyTask);
         get("/arr", App::humongousAllocation);
+        get("/blocking-threads", App::blockedThreads);
+        get("/waiting-threads", App::waitingThreads);
         get("/dead-lock", App::deadLock);
         get("/gc", App::runGC);
         get("/decompressor", App::decompressor);
+        post("/message", App::postMessage);
+
+        startProducerAndConsumer();
 
         System.out.println("Listening on port " + listenPort);
+    }
+
+    private static void startProducerAndConsumer() {
+        Thread producerThread = new Thread(producer);
+        producerThread.start();
+
+        Thread consumerThread = new Thread(messageConsumer);
+        consumerThread.start();
+    }
+
+    private static String blockedThreads(Request req, Response res) throws Exception {
+        for (int i = 0; i < 100; i++) {
+            new BlockingThread("blocking-thread-" + i).start();
+        }
+        return "Started blocking threads\n";
+    }
+
+    private static String waitingThreads(Request req, Response res) throws Exception {
+        for (int i = 0; i < 100; i++) {
+            new WaitingThread("waiting-thread-" + i).start();
+        }
+        return "Started waiting threads\n";
+    }
+
+    private static String postMessage(Request req, Response res) throws Exception {
+        String message = req.queryParamOrDefault("message", "no-message");
+        dataQueue.add(new Message("user", message));
+        return "Sent a message\n";
     }
 
 
@@ -36,7 +80,7 @@ public class App {
             byte[] compressedBytes = compressString(text);
             String decompressedText = decompressString(compressedBytes);
         }
-        return "compressed and decompressed " + numMB + " MB " + loop + " times";
+        return "compressed and decompressed " + numMB + " MB " + loop + " times\n";
     }
 
 

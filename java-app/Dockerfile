@@ -12,7 +12,7 @@ FROM azul/zulu-openjdk:11-latest
 ARG JEMALLOC_VERSION=5.3.0
 ARG OTEL_AGENT_VERSION=1.29.0
 
-RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz tcpdump net-tools iftop curl && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && mkdir /async-profiler
 
