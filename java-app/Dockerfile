@@ -12,7 +12,7 @@ FROM azul/zulu-openjdk:11-latest
 ARG JEMALLOC_VERSION=5.3.0
 ARG OTEL_AGENT_VERSION=1.29.0
 
-RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz tcpdump net-tools iftop curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y wget bzip2 make build-essential graphviz tcpdump net-tools iftop curl sysstat  && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && mkdir /async-profiler
 
@@ -38,6 +38,11 @@ COPY --from=builder /app/target/java-app-1.0-SNAPSHOT-jar-with-dependencies.jar 
 COPY entry.sh /app/entry.sh
 
 RUN chmod +x /app/entry.sh
+
+ENV JAVA_XMX="64m"
+ENV JAVA_XMS="64m"
+ENV JAVA_GC="-XX:+UseG1GC"
+ENV OTEL_EXPORTER_ENDPOINT="http://localhost:4318"
 
 WORKDIR /app
 ENTRYPOINT [ "bash", "/app/entry.sh" ]

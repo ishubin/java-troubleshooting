@@ -33,7 +33,7 @@ java -javaagent:/opentelemetry-javaagent.jar \
   -Dotel.exporter.otlp.traces.protocol=${OTEL_EXPORTER_PROTOCOL} \
   -Dotel.exporter.otlp.endpoint=${OTEL_EXPORTER_ENDPOINT} \
   -Dotel.propagators=b3multi \
-  -Xmx64m -XX:NativeMemoryTracking=detail \
+  "-Xmx${JAVA_XMX}" "-Xms${JAVA_XMS}" -XX:NativeMemoryTracking=detail $JAVA_GC \
   -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:+PreserveFramePointer \
   -Xlog:gc*=debug:file=/app/gc.log:time,uptimemillis,pid,tid,level,tags:filecount=5,filesize=100m \
   -jar /app/app.jar &

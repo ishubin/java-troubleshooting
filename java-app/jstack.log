@@ -1,0 +1,2047 @@
+2024-04-16 14:30:15
+Full thread dump OpenJDK 64-Bit Server VM (11.0.22+7-LTS mixed mode):
+
+Threads class SMR info:
+_java_thread_list=0x0000fffee0002780, length=161, elements={
+0x0000ffff84193000, 0x0000ffff84195800, 0x0000ffff841ae000, 0x0000ffff841b0800,
+0x0000ffff841b3000, 0x0000ffff841b6000, 0x0000ffff841b8800, 0x0000ffff84269800,
+0x0000ffff846cf800, 0x0000ffff84712800, 0x0000ffff84d92000, 0x0000ffff84dda800,
+0x0000ffff84dde800, 0x0000ffff84ddf800, 0x0000ffff8403b800, 0x0000ffff1c0f1800,
+0x0000ffff1c0f2800, 0x0000ffff1c0f4800, 0x0000ffff1c0f6800, 0x0000ffff1c0f8800,
+0x0000ffff1c0fa800, 0x0000ffff1c0fc000, 0x0000ffff1c0fe000, 0x0000ffff1c102000,
+0x0000fffeec00b000, 0x0000fffee405b800, 0x0000fffee405d800, 0x0000fffee405f800,
+0x0000fffee4061800, 0x0000fffee4063800, 0x0000fffee4065800, 0x0000fffee4067800,
+0x0000fffee4069800, 0x0000fffee406c000, 0x0000fffee406e000, 0x0000fffee4070000,
+0x0000fffee4072800, 0x0000fffee4074800, 0x0000fffee4076800, 0x0000fffee4079000,
+0x0000fffee407b000, 0x0000fffee407d000, 0x0000fffee407f000, 0x0000fffee4081000,
+0x0000fffee4083000, 0x0000fffee4085000, 0x0000fffee4087000, 0x0000fffee4089000,
+0x0000fffee408b800, 0x0000fffee408d800, 0x0000fffee408f800, 0x0000fffee4092000,
+0x0000fffee4094000, 0x0000fffee4096000, 0x0000fffee4098000, 0x0000fffee4099800,
+0x0000fffee409b800, 0x0000fffee409d800, 0x0000fffee409f800, 0x0000fffee40a1800,
+0x0000fffee40a4000, 0x0000fffee40a5800, 0x0000fffee40a8000, 0x0000fffee40aa000,
+0x0000fffee40ac000, 0x0000fffee40ae000, 0x0000fffee40b0000, 0x0000fffee40b2000,
+0x0000fffee40b4000, 0x0000fffee40b6000, 0x0000fffee40b8000, 0x0000fffee40ba800,
+0x0000ffff1400a000, 0x0000ffff40002000, 0x0000ffff2c040000, 0x0000fffeec021800,
+0x0000fffeec023000, 0x0000fffeec024800, 0x0000fffeec026000, 0x0000fffeec027800,
+0x0000fffeec028800, 0x0000fffeec02a000, 0x0000fffeec02b800, 0x0000fffeec02d000,
+0x0000fffeec02e800, 0x0000fffeec070800, 0x0000fffeec072000, 0x0000fffeec074000,
+0x0000fffeec076000, 0x0000fffeec077800, 0x0000fffeec079800, 0x0000fffeec07b800,
+0x0000fffeec07d000, 0x0000fffeec07f000, 0x0000fffeec081000, 0x0000fffeec082800,
+0x0000fffeec084000, 0x0000fffeec085800, 0x0000fffeec087000, 0x0000fffeec089800,
+0x0000fffeec08b800, 0x0000fffeec08d800, 0x0000fffeec090000, 0x0000fffeec092000,
+0x0000fffeec094000, 0x0000fffeec096000, 0x0000fffeec098000, 0x0000fffeec09a000,
+0x0000fffeec09c800, 0x0000fffeec09e800, 0x0000fffeec0a0800, 0x0000fffeec0a2800,
+0x0000fffeec0a5000, 0x0000fffeec0a7000, 0x0000fffeec0a9000, 0x0000fffeec0ab000,
+0x0000fffeec0ad000, 0x0000fffeec0af000, 0x0000fffeec0d3800, 0x0000fffeec0d5800,
+0x0000fffeec0d7800, 0x0000fffeec0da000, 0x0000fffeec0dc000, 0x0000fffeec0de000,
+0x0000fffeec0e0000, 0x0000fffeec0e2000, 0x0000fffeec0e4800, 0x0000fffeec0e6800,
+0x0000fffeec0e8800, 0x0000fffeec0ea800, 0x0000fffeec0ec800, 0x0000fffeec0ef000,
+0x0000fffeec0f1000, 0x0000fffeec0f3800, 0x0000fffeec0f5800, 0x0000fffeec0f7800,
+0x0000fffeec0f9800, 0x0000fffeec0fb800, 0x0000fffeec0fe000, 0x0000fffeec100000,
+0x0000fffeec102000, 0x0000fffeec104000, 0x0000fffeec106000, 0x0000fffeec107800,
+0x0000fffeec109800, 0x0000fffeec10b800, 0x0000fffeec10e000, 0x0000fffeec110000,
+0x0000fffeec112000, 0x0000fffeec114000, 0x0000fffeec116000, 0x0000fffeec118000,
+0x0000fffeec11a000, 0x0000fffeec11c800, 0x0000fffeec11e800, 0x0000fffeec120800,
+0x0000fffeec122800, 0x0000fffeec124800, 0x0000fffeec126800, 0x0000fffeec129000,
+0x0000fffeec12b000
+}
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 cpu=1.35ms elapsed=285.07s tid=0x0000ffff84193000 nid=0xf waiting on condition  [0x0000ffff6c4a0000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.22/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@11.0.22/Reference.java:241)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@11.0.22/Reference.java:213)
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #3 daemon prio=8 os_prio=0 cpu=0.31ms elapsed=285.07s tid=0x0000ffff84195800 nid=0x10 in Object.wait()  [0x0000ffff6c2a0000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.22/Native Method)
+	- waiting on <0x00000000fc59af10> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.22/ReferenceQueue.java:155)
+	- waiting to re-lock in wait() <0x00000000fc59af10> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.22/ReferenceQueue.java:176)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@11.0.22/Finalizer.java:170)
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 cpu=0.42ms elapsed=285.07s tid=0x0000ffff841ae000 nid=0x11 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #5 daemon prio=9 os_prio=0 cpu=21.92ms elapsed=285.07s tid=0x0000ffff841b0800 nid=0x12 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=0 cpu=2323.01ms elapsed=285.07s tid=0x0000ffff841b3000 nid=0x13 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread0" #8 daemon prio=9 os_prio=0 cpu=1206.46ms elapsed=285.07s tid=0x0000ffff841b6000 nid=0x14 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"Sweeper thread" #9 daemon prio=9 os_prio=0 cpu=3.24ms elapsed=285.07s tid=0x0000ffff841b8800 nid=0x15 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Common-Cleaner" #10 daemon prio=8 os_prio=0 cpu=1.93ms elapsed=285.05s tid=0x0000ffff84269800 nid=0x16 in Object.wait()  [0x0000ffff56b15000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.22/Native Method)
+	- waiting on <0x00000000fc3a4868> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.22/ReferenceQueue.java:155)
+	- waiting to re-lock in wait() <0x00000000fc3a4868> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@11.0.22/CleanerImpl.java:148)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+	at jdk.internal.misc.InnocuousThread.run(java.base@11.0.22/InnocuousThread.java:161)
+
+   Locked ownable synchronizers:
+	- None
+
+"PeriodicMetricReader-1" #11 daemon prio=5 os_prio=0 cpu=56.91ms elapsed=284.73s tid=0x0000ffff846cf800 nid=0x18 waiting on condition  [0x0000ffff55c7d000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fc72ef78> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@11.0.22/ThreadPoolExecutor.java:1054)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@11.0.22/Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@11.0.22/Unknown Source)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"BatchSpanProcessor_WorkerThread-1" #12 daemon prio=5 os_prio=0 cpu=73.61ms elapsed=284.71s tid=0x0000ffff84712800 nid=0x19 waiting on condition  [0x0000ffff5587d000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fc73d208> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at java.util.concurrent.ArrayBlockingQueue.poll(java.base@11.0.22/ArrayBlockingQueue.java:432)
+	at io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker.run(BatchSpanProcessor.java:253)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"weak-ref-cleaner" #15 daemon prio=5 os_prio=0 cpu=0.22ms elapsed=283.12s tid=0x0000ffff84d92000 nid=0x1a in Object.wait()  [0x0000ffff54c7e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.22/Native Method)
+	- waiting on <0x00000000fc881838> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.22/ReferenceQueue.java:155)
+	- waiting to re-lock in wait() <0x00000000fc881838> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.22/ReferenceQueue.java:176)
+	at io.opentelemetry.javaagent.shaded.instrumentation.api.internal.cache.weaklockfree.AbstractWeakConcurrentMap.runCleanup(AbstractWeakConcurrentMap.java:260)
+	at io.opentelemetry.javaagent.shaded.instrumentation.api.internal.cache.weaklockfree.WeakConcurrentMapCleaner$$Lambda$293/0x00000001003a7040.run(Unknown Source)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-2" #17 prio=5 os_prio=0 cpu=138.35ms elapsed=283.08s tid=0x0000ffff84dda800 nid=0x1c in Object.wait()  [0x0000ffff5486d000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.22/Native Method)
+	- waiting on <0x00000000fe218380> (a java.lang.Object)
+	at java.lang.Object.wait(java.base@11.0.22/Object.java:328)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.join(QueuedThreadPool.java:744)
+	- waiting to re-lock in wait() <0x00000000fe218380> (a java.lang.Object)
+	at org.eclipse.jetty.server.Server.join(Server.java:566)
+	at spark.embeddedserver.jetty.EmbeddedJettyServer.join(EmbeddedJettyServer.java:163)
+	at spark.Service.lambda$init$2(Service.java:645)
+	at spark.Service$$Lambda$300/0x00000001003a3840.run(Unknown Source)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-3" #18 prio=5 os_prio=0 cpu=373.60ms elapsed=283.07s tid=0x0000ffff84dde800 nid=0x1d waiting on condition  [0x0000ffff5466e000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(java.base@11.0.22/Native Method)
+	at com.github.ishubin.javatroubleshooting.messaging.ThreadUtil.sleep(ThreadUtil.java:19)
+	at com.github.ishubin.javatroubleshooting.messaging.Producer.produce(Producer.java:49)
+	at com.github.ishubin.javatroubleshooting.messaging.Producer.run(Producer.java:19)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-4" #19 prio=5 os_prio=0 cpu=381.96ms elapsed=283.07s tid=0x0000ffff84ddf800 nid=0x1e in Object.wait()  [0x0000ffff5446e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.22/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@11.0.22/Object.java:328)
+	at com.github.ishubin.javatroubleshooting.messaging.DataQueue.waitIsNotEmpty(DataQueue.java:32)
+	- waiting to re-lock in wait() <0x00000000fcd6ca38> (a java.lang.Object)
+	at com.github.ishubin.javatroubleshooting.messaging.MessageConsumer.consume(MessageConsumer.java:32)
+	at com.github.ishubin.javatroubleshooting.messaging.MessageConsumer.run(MessageConsumer.java:20)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"DestroyJavaVM" #20 prio=5 os_prio=0 cpu=1141.36ms elapsed=283.07s tid=0x0000ffff8403b800 nid=0x8 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-21" #21 prio=5 os_prio=0 cpu=3.62ms elapsed=282.94s tid=0x0000ffff1c0f1800 nid=0x22 waiting on condition  [0x0000ffff0f69f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe2310c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:382)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.idleJobPoll(QueuedThreadPool.java:974)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1018)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-22" #22 prio=5 os_prio=0 cpu=9.47ms elapsed=282.94s tid=0x0000ffff1c0f2800 nid=0x23 runnable  [0x0000ffff0f49f000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPoll.wait(java.base@11.0.22/Native Method)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@11.0.22/EPollSelectorImpl.java:120)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@11.0.22/SelectorImpl.java:124)
+	- locked <0x00000000fe230888> (a sun.nio.ch.Util$2)
+	- locked <0x00000000fe230830> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(java.base@11.0.22/SelectorImpl.java:141)
+	at org.eclipse.jetty.io.ManagedSelector.nioSelect(ManagedSelector.java:183)
+	at org.eclipse.jetty.io.ManagedSelector.select(ManagedSelector.java:190)
+	at org.eclipse.jetty.io.ManagedSelector$SelectorProducer.select(ManagedSelector.java:606)
+	at org.eclipse.jetty.io.ManagedSelector$SelectorProducer.produce(ManagedSelector.java:543)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produceTask(EatWhatYouKill.java:362)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:186)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.io.ManagedSelector$$Lambda$356/0x0000000100438c40.run(Unknown Source)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-23-acceptor-0@52aea567-ServerConnector@70f6503c{HTTP/1.1, (http/1.1)}{0.0.0.0:4050}" #23 prio=3 os_prio=0 cpu=13.20ms elapsed=282.94s tid=0x0000ffff1c0f4800 nid=0x24 runnable  [0x0000ffff0f29f000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(java.base@11.0.22/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@11.0.22/ServerSocketChannelImpl.java:533)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@11.0.22/ServerSocketChannelImpl.java:285)
+	at org.eclipse.jetty.server.ServerConnector.accept(ServerConnector.java:388)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:704)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- <0x00000000fe24dda8> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"qtp315065637-24" #24 prio=5 os_prio=0 cpu=87.84ms elapsed=282.94s tid=0x0000ffff1c0f6800 nid=0x25 waiting on condition  [0x0000ffff0f09f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe2310c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:382)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.idleJobPoll(QueuedThreadPool.java:974)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1018)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-25" #25 prio=5 os_prio=0 cpu=1.33ms elapsed=282.94s tid=0x0000ffff1c0f8800 nid=0x26 waiting on condition  [0x0000ffff0ee9f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe2310c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:382)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.idleJobPoll(QueuedThreadPool.java:974)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1018)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-26" #26 prio=5 os_prio=0 cpu=67.80ms elapsed=282.94s tid=0x0000ffff1c0fa800 nid=0x27 waiting on condition  [0x0000ffff0ec9f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe2310c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:382)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.idleJobPoll(QueuedThreadPool.java:974)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1018)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-27" #27 prio=5 os_prio=0 cpu=1.67ms elapsed=282.94s tid=0x0000ffff1c0fc000 nid=0x28 runnable  [0x0000ffff0ea9f000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPoll.wait(java.base@11.0.22/Native Method)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@11.0.22/EPollSelectorImpl.java:120)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@11.0.22/SelectorImpl.java:124)
+	- locked <0x00000000fe218940> (a sun.nio.ch.Util$2)
+	- locked <0x00000000fe2188e8> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(java.base@11.0.22/SelectorImpl.java:141)
+	at org.eclipse.jetty.io.ManagedSelector.nioSelect(ManagedSelector.java:183)
+	at org.eclipse.jetty.io.ManagedSelector.select(ManagedSelector.java:190)
+	at org.eclipse.jetty.io.ManagedSelector$SelectorProducer.select(ManagedSelector.java:606)
+	at org.eclipse.jetty.io.ManagedSelector$SelectorProducer.produce(ManagedSelector.java:543)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produceTask(EatWhatYouKill.java:362)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:186)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"qtp315065637-28" #28 prio=5 os_prio=0 cpu=1.91ms elapsed=282.94s tid=0x0000ffff1c0fe000 nid=0x29 waiting on condition  [0x0000ffff0e89f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe2310c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:382)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.idleJobPoll(QueuedThreadPool.java:974)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1018)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"Session-HouseKeeper-297e2cd5-1" #29 prio=5 os_prio=0 cpu=0.17ms elapsed=282.93s tid=0x0000ffff1c102000 nid=0x2a waiting on condition  [0x0000ffff0e55a000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe21e820> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@11.0.22/ThreadPoolExecutor.java:1054)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@11.0.22/ThreadPoolExecutor.java:1114)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@11.0.22/ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"Connector-Scheduler-70f6503c-1" #30 prio=5 os_prio=0 cpu=1.06ms elapsed=267.22s tid=0x0000fffeec00b000 nid=0x2b waiting on condition  [0x0000ffff0e35a000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fe24d338> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@11.0.22/AbstractQueuedSynchronizer.java:2123)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@11.0.22/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@11.0.22/ThreadPoolExecutor.java:1054)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@11.0.22/ThreadPoolExecutor.java:1114)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@11.0.22/ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-1" #32 prio=5 os_prio=0 cpu=0.77ms elapsed=267.12s tid=0x0000fffee405b800 nid=0x2d waiting for monitor entry  [0x0000ffff0dd5b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-2" #33 prio=5 os_prio=0 cpu=0.20ms elapsed=267.12s tid=0x0000fffee405d800 nid=0x2e waiting for monitor entry  [0x0000ffff0db5b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-3" #34 prio=5 os_prio=0 cpu=0.15ms elapsed=267.12s tid=0x0000fffee405f800 nid=0x2f waiting for monitor entry  [0x0000ffff0d95b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-4" #35 prio=5 os_prio=0 cpu=0.12ms elapsed=267.12s tid=0x0000fffee4061800 nid=0x30 waiting for monitor entry  [0x0000ffff0d75b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-5" #36 prio=5 os_prio=0 cpu=0.12ms elapsed=267.12s tid=0x0000fffee4063800 nid=0x31 waiting for monitor entry  [0x0000ffff0d55b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-6" #37 prio=5 os_prio=0 cpu=0.19ms elapsed=267.12s tid=0x0000fffee4065800 nid=0x32 waiting for monitor entry  [0x0000ffff0d35b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-7" #38 prio=5 os_prio=0 cpu=0.17ms elapsed=267.12s tid=0x0000fffee4067800 nid=0x33 waiting for monitor entry  [0x0000ffff0d15b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-8" #39 prio=5 os_prio=0 cpu=0.17ms elapsed=267.12s tid=0x0000fffee4069800 nid=0x34 waiting for monitor entry  [0x0000ffff0cf5b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-9" #40 prio=5 os_prio=0 cpu=0.13ms elapsed=267.12s tid=0x0000fffee406c000 nid=0x35 waiting for monitor entry  [0x0000ffff0cd5b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-10" #41 prio=5 os_prio=0 cpu=0.14ms elapsed=267.12s tid=0x0000fffee406e000 nid=0x36 waiting for monitor entry  [0x0000ffff0cb5b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-11" #42 prio=5 os_prio=0 cpu=0.13ms elapsed=267.12s tid=0x0000fffee4070000 nid=0x37 waiting for monitor entry  [0x0000ffff0c95b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-12" #43 prio=5 os_prio=0 cpu=0.12ms elapsed=267.12s tid=0x0000fffee4072800 nid=0x38 waiting for monitor entry  [0x0000ffff0c75b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-13" #44 prio=5 os_prio=0 cpu=0.12ms elapsed=267.12s tid=0x0000fffee4074800 nid=0x39 waiting for monitor entry  [0x0000ffff0c55b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-14" #45 prio=5 os_prio=0 cpu=0.08ms elapsed=267.12s tid=0x0000fffee4076800 nid=0x3a waiting for monitor entry  [0x0000ffff0c35b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-15" #46 prio=5 os_prio=0 cpu=0.21ms elapsed=267.12s tid=0x0000fffee4079000 nid=0x3b waiting for monitor entry  [0x0000fffecbffe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-16" #47 prio=5 os_prio=0 cpu=0.16ms elapsed=267.12s tid=0x0000fffee407b000 nid=0x3c waiting for monitor entry  [0x0000fffecbdfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-17" #48 prio=5 os_prio=0 cpu=0.10ms elapsed=267.12s tid=0x0000fffee407d000 nid=0x3d waiting for monitor entry  [0x0000fffecbbfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-18" #49 prio=5 os_prio=0 cpu=0.11ms elapsed=267.12s tid=0x0000fffee407f000 nid=0x3e waiting for monitor entry  [0x0000fffecb9fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-19" #50 prio=5 os_prio=0 cpu=0.12ms elapsed=267.12s tid=0x0000fffee4081000 nid=0x3f waiting for monitor entry  [0x0000fffecb7fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-20" #51 prio=5 os_prio=0 cpu=0.13ms elapsed=267.12s tid=0x0000fffee4083000 nid=0x40 waiting for monitor entry  [0x0000fffecb5fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-21" #52 prio=5 os_prio=0 cpu=0.15ms elapsed=267.12s tid=0x0000fffee4085000 nid=0x41 waiting for monitor entry  [0x0000fffecb3fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-22" #53 prio=5 os_prio=0 cpu=0.11ms elapsed=267.12s tid=0x0000fffee4087000 nid=0x42 waiting for monitor entry  [0x0000fffecb1fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-23" #54 prio=5 os_prio=0 cpu=0.18ms elapsed=267.12s tid=0x0000fffee4089000 nid=0x43 waiting for monitor entry  [0x0000fffecaffe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-24" #55 prio=5 os_prio=0 cpu=0.16ms elapsed=267.12s tid=0x0000fffee408b800 nid=0x44 waiting for monitor entry  [0x0000fffecadfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-25" #56 prio=5 os_prio=0 cpu=0.19ms elapsed=267.12s tid=0x0000fffee408d800 nid=0x45 waiting for monitor entry  [0x0000fffecabfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-26" #57 prio=5 os_prio=0 cpu=0.18ms elapsed=267.12s tid=0x0000fffee408f800 nid=0x46 waiting for monitor entry  [0x0000fffeca9fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-27" #58 prio=5 os_prio=0 cpu=0.17ms elapsed=267.11s tid=0x0000fffee4092000 nid=0x47 waiting for monitor entry  [0x0000fffeca7fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-28" #59 prio=5 os_prio=0 cpu=0.12ms elapsed=267.11s tid=0x0000fffee4094000 nid=0x48 waiting for monitor entry  [0x0000fffeca5fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-29" #60 prio=5 os_prio=0 cpu=0.10ms elapsed=267.11s tid=0x0000fffee4096000 nid=0x49 waiting for monitor entry  [0x0000fffeca3fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-30" #61 prio=5 os_prio=0 cpu=0.16ms elapsed=267.11s tid=0x0000fffee4098000 nid=0x4a waiting for monitor entry  [0x0000fffeca1fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-31" #62 prio=5 os_prio=0 cpu=0.22ms elapsed=267.11s tid=0x0000fffee4099800 nid=0x4b waiting for monitor entry  [0x0000fffec9ffe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-32" #63 prio=5 os_prio=0 cpu=0.12ms elapsed=267.11s tid=0x0000fffee409b800 nid=0x4c waiting for monitor entry  [0x0000fffec9dfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-33" #64 prio=5 os_prio=0 cpu=0.21ms elapsed=267.11s tid=0x0000fffee409d800 nid=0x4d waiting for monitor entry  [0x0000fffec9bfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-34" #65 prio=5 os_prio=0 cpu=0.31ms elapsed=267.11s tid=0x0000fffee409f800 nid=0x4e waiting for monitor entry  [0x0000fffec99fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-35" #66 prio=5 os_prio=0 cpu=0.20ms elapsed=267.11s tid=0x0000fffee40a1800 nid=0x4f waiting for monitor entry  [0x0000fffec97fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-36" #67 prio=5 os_prio=0 cpu=0.17ms elapsed=267.11s tid=0x0000fffee40a4000 nid=0x50 waiting for monitor entry  [0x0000fffec95fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-37" #68 prio=5 os_prio=0 cpu=0.14ms elapsed=267.11s tid=0x0000fffee40a5800 nid=0x51 waiting for monitor entry  [0x0000fffec93fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-38" #69 prio=5 os_prio=0 cpu=0.10ms elapsed=267.11s tid=0x0000fffee40a8000 nid=0x52 waiting for monitor entry  [0x0000fffec91fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-39" #70 prio=5 os_prio=0 cpu=0.14ms elapsed=267.11s tid=0x0000fffee40aa000 nid=0x53 waiting for monitor entry  [0x0000fffec8ffe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-40" #71 prio=5 os_prio=0 cpu=0.12ms elapsed=267.11s tid=0x0000fffee40ac000 nid=0x54 waiting for monitor entry  [0x0000fffec8dfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-41" #72 prio=5 os_prio=0 cpu=0.15ms elapsed=267.11s tid=0x0000fffee40ae000 nid=0x55 waiting for monitor entry  [0x0000fffec8bfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-42" #73 prio=5 os_prio=0 cpu=0.16ms elapsed=267.11s tid=0x0000fffee40b0000 nid=0x56 waiting for monitor entry  [0x0000fffec89fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-43" #74 prio=5 os_prio=0 cpu=0.14ms elapsed=267.11s tid=0x0000fffee40b2000 nid=0x57 waiting for monitor entry  [0x0000fffec87fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-44" #75 prio=5 os_prio=0 cpu=0.10ms elapsed=267.11s tid=0x0000fffee40b4000 nid=0x58 waiting for monitor entry  [0x0000fffec85fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-45" #76 prio=5 os_prio=0 cpu=0.14ms elapsed=267.11s tid=0x0000fffee40b6000 nid=0x59 waiting for monitor entry  [0x0000fffec83fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-46" #77 prio=5 os_prio=0 cpu=0.17ms elapsed=267.10s tid=0x0000fffee40b8000 nid=0x5a waiting for monitor entry  [0x0000fffec81fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- waiting to lock <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"blocking-thread-47" #78 prio=5 os_prio=0 cpu=0.64ms elapsed=267.10s tid=0x0000fffee40ba800 nid=0x5b waiting on condition  [0x0000fffec7ffe000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(java.base@11.0.22/Native Method)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.doSomething(BlockingThread.java:19)
+	- locked <0x00000000fe21bc78> (a java.lang.Class for com.github.ishubin.javatroubleshooting.threads.BlockingThread)
+	at com.github.ishubin.javatroubleshooting.threads.BlockingThread.run(BlockingThread.java:13)
+
+   Locked ownable synchronizers:
+	- None
+
+"Okio Watchdog" #132 daemon prio=5 os_prio=0 cpu=6.41ms elapsed=264.65s tid=0x0000ffff1400a000 nid=0x91 waiting on condition  [0x0000fffec13fe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff818560> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@11.0.22/AbstractQueuedSynchronizer.java:2211)
+	at okio.AsyncTimeout$Companion.awaitTimeout$okio(AsyncTimeout.kt:308)
+	at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.kt:186)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #133 daemon prio=9 os_prio=0 cpu=0.79ms elapsed=246.58s tid=0x0000ffff40002000 nid=0xa9 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"okhttp-dispatch-1" #134 daemon prio=5 os_prio=0 cpu=14.70ms elapsed=224.69s tid=0x0000ffff2c040000 nid=0xaa waiting on condition  [0x0000fffec23fd000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000fc4a45d8> (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@11.0.22/LockSupport.java:234)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(java.base@11.0.22/SynchronousQueue.java:462)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(java.base@11.0.22/SynchronousQueue.java:361)
+	at java.util.concurrent.SynchronousQueue.poll(java.base@11.0.22/SynchronousQueue.java:937)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@11.0.22/ThreadPoolExecutor.java:1053)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@11.0.22/ThreadPoolExecutor.java:1114)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@11.0.22/ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(java.base@11.0.22/Thread.java:829)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-14" #149 prio=5 os_prio=0 cpu=0.15ms elapsed=74.56s tid=0x0000fffeec021800 nid=0xb9 waiting on condition  [0x0000fffec43fe000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(java.base@11.0.22/Native Method)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:17)
+
+   Locked ownable synchronizers:
+	- <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"waiting-thread-15" #150 prio=5 os_prio=0 cpu=0.09ms elapsed=74.56s tid=0x0000fffeec023000 nid=0xba waiting on condition  [0x0000fffec41fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-16" #151 prio=5 os_prio=0 cpu=0.09ms elapsed=74.56s tid=0x0000fffeec024800 nid=0xbb waiting on condition  [0x0000fffec3ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-17" #152 prio=5 os_prio=0 cpu=0.11ms elapsed=74.56s tid=0x0000fffeec026000 nid=0xbc waiting on condition  [0x0000fffec3dfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-18" #153 prio=5 os_prio=0 cpu=0.07ms elapsed=74.56s tid=0x0000fffeec027800 nid=0xbd waiting on condition  [0x0000fffec3bfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-19" #154 prio=5 os_prio=0 cpu=0.07ms elapsed=74.56s tid=0x0000fffeec028800 nid=0xbe waiting on condition  [0x0000fffec39fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-20" #155 prio=5 os_prio=0 cpu=0.14ms elapsed=74.56s tid=0x0000fffeec02a000 nid=0xbf waiting on condition  [0x0000ffff0df5a000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-21" #156 prio=5 os_prio=0 cpu=0.17ms elapsed=74.56s tid=0x0000fffeec02b800 nid=0xc0 waiting on condition  [0x0000fffec37fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-22" #157 prio=5 os_prio=0 cpu=0.12ms elapsed=74.56s tid=0x0000fffeec02d000 nid=0xc1 waiting on condition  [0x0000fffec35fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-23" #158 prio=5 os_prio=0 cpu=0.22ms elapsed=74.56s tid=0x0000fffeec02e800 nid=0xc2 waiting on condition  [0x0000fffec33fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-24" #159 prio=5 os_prio=0 cpu=0.12ms elapsed=74.56s tid=0x0000fffeec070800 nid=0xc3 waiting on condition  [0x0000fffec31fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-25" #160 prio=5 os_prio=0 cpu=0.18ms elapsed=74.56s tid=0x0000fffeec072000 nid=0xc4 waiting on condition  [0x0000fffec2ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-26" #161 prio=5 os_prio=0 cpu=0.14ms elapsed=74.56s tid=0x0000fffeec074000 nid=0xc5 waiting on condition  [0x0000fffec2dfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-27" #162 prio=5 os_prio=0 cpu=0.21ms elapsed=74.56s tid=0x0000fffeec076000 nid=0xc6 waiting on condition  [0x0000fffec2bfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-28" #163 prio=5 os_prio=0 cpu=0.13ms elapsed=74.56s tid=0x0000fffeec077800 nid=0xc7 waiting on condition  [0x0000fffec29fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-29" #164 prio=5 os_prio=0 cpu=0.10ms elapsed=74.56s tid=0x0000fffeec079800 nid=0xc8 waiting on condition  [0x0000fffec27fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-30" #165 prio=5 os_prio=0 cpu=0.12ms elapsed=74.56s tid=0x0000fffeec07b800 nid=0xc9 waiting on condition  [0x0000fffec25fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-31" #166 prio=5 os_prio=0 cpu=0.16ms elapsed=74.56s tid=0x0000fffeec07d000 nid=0xca waiting on condition  [0x0000fffec21fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-32" #167 prio=5 os_prio=0 cpu=0.11ms elapsed=74.56s tid=0x0000fffeec07f000 nid=0xcb waiting on condition  [0x0000fffec1ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-33" #168 prio=5 os_prio=0 cpu=0.17ms elapsed=74.56s tid=0x0000fffeec081000 nid=0xcc waiting on condition  [0x0000fffec1dfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-34" #169 prio=5 os_prio=0 cpu=0.10ms elapsed=74.56s tid=0x0000fffeec082800 nid=0xcd waiting on condition  [0x0000fffec19fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-35" #170 prio=5 os_prio=0 cpu=0.63ms elapsed=74.56s tid=0x0000fffeec084000 nid=0xce waiting on condition  [0x0000fffec17fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-36" #171 prio=5 os_prio=0 cpu=0.38ms elapsed=74.56s tid=0x0000fffeec085800 nid=0xcf waiting on condition  [0x0000fffec15fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-37" #172 prio=5 os_prio=0 cpu=0.33ms elapsed=74.56s tid=0x0000fffeec087000 nid=0xd0 waiting on condition  [0x0000fffec0ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-38" #173 prio=5 os_prio=0 cpu=0.26ms elapsed=74.56s tid=0x0000fffeec089800 nid=0xd1 waiting on condition  [0x0000fffec0dfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-39" #174 prio=5 os_prio=0 cpu=0.18ms elapsed=74.56s tid=0x0000fffeec08b800 nid=0xd2 waiting on condition  [0x0000fffec0bfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-40" #175 prio=5 os_prio=0 cpu=0.12ms elapsed=74.56s tid=0x0000fffeec08d800 nid=0xd3 waiting on condition  [0x0000fffec09fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-41" #176 prio=5 os_prio=0 cpu=0.40ms elapsed=74.56s tid=0x0000fffeec090000 nid=0xd4 waiting on condition  [0x0000fffec07fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-42" #177 prio=5 os_prio=0 cpu=0.43ms elapsed=74.56s tid=0x0000fffeec092000 nid=0xd5 waiting on condition  [0x0000fffec05fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-43" #178 prio=5 os_prio=0 cpu=0.22ms elapsed=74.56s tid=0x0000fffeec094000 nid=0xd6 waiting on condition  [0x0000fffec03fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-44" #179 prio=5 os_prio=0 cpu=0.18ms elapsed=74.56s tid=0x0000fffeec096000 nid=0xd7 waiting on condition  [0x0000fffec01fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-45" #180 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec098000 nid=0xd8 waiting on condition  [0x0000fffebfffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-46" #181 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec09a000 nid=0xd9 waiting on condition  [0x0000fffebfdfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-47" #182 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec09c800 nid=0xda waiting on condition  [0x0000fffebfbfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-48" #183 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec09e800 nid=0xdb waiting on condition  [0x0000fffebf9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-49" #184 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0a0800 nid=0xdc waiting on condition  [0x0000fffebf7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-50" #185 prio=5 os_prio=0 cpu=0.16ms elapsed=74.55s tid=0x0000fffeec0a2800 nid=0xdd waiting on condition  [0x0000fffebf5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-51" #186 prio=5 os_prio=0 cpu=0.17ms elapsed=74.55s tid=0x0000fffeec0a5000 nid=0xde waiting on condition  [0x0000fffebf3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-52" #187 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0a7000 nid=0xdf waiting on condition  [0x0000fffebf1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-53" #188 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec0a9000 nid=0xe0 waiting on condition  [0x0000fffebeffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-54" #189 prio=5 os_prio=0 cpu=0.22ms elapsed=74.55s tid=0x0000fffeec0ab000 nid=0xe1 waiting on condition  [0x0000fffebedfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-55" #190 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec0ad000 nid=0xe2 waiting on condition  [0x0000fffebebfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-56" #191 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec0af000 nid=0xe3 waiting on condition  [0x0000fffebe9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-57" #192 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec0d3800 nid=0xe4 waiting on condition  [0x0000fffebe7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-58" #193 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec0d5800 nid=0xe5 waiting on condition  [0x0000fffebe5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-59" #194 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec0d7800 nid=0xe6 waiting on condition  [0x0000fffebe3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-60" #195 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec0da000 nid=0xe7 waiting on condition  [0x0000fffebe1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-61" #196 prio=5 os_prio=0 cpu=0.09ms elapsed=74.55s tid=0x0000fffeec0dc000 nid=0xe8 waiting on condition  [0x0000fffebdffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-62" #197 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0de000 nid=0xe9 waiting on condition  [0x0000fffebddfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-63" #198 prio=5 os_prio=0 cpu=0.12ms elapsed=74.55s tid=0x0000fffeec0e0000 nid=0xea waiting on condition  [0x0000fffebdbfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-64" #199 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec0e2000 nid=0xeb waiting on condition  [0x0000fffebd9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-65" #200 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0e4800 nid=0xec waiting on condition  [0x0000fffebd7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-66" #201 prio=5 os_prio=0 cpu=0.22ms elapsed=74.55s tid=0x0000fffeec0e6800 nid=0xed waiting on condition  [0x0000fffebd5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-67" #202 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0e8800 nid=0xee waiting on condition  [0x0000fffebd3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-68" #203 prio=5 os_prio=0 cpu=0.20ms elapsed=74.55s tid=0x0000fffeec0ea800 nid=0xef waiting on condition  [0x0000fffebd1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-69" #204 prio=5 os_prio=0 cpu=0.26ms elapsed=74.55s tid=0x0000fffeec0ec800 nid=0xf0 waiting on condition  [0x0000fffebcffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-70" #205 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec0ef000 nid=0xf1 waiting on condition  [0x0000fffebcdfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-71" #206 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec0f1000 nid=0xf2 waiting on condition  [0x0000fffebcbfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-72" #207 prio=5 os_prio=0 cpu=0.17ms elapsed=74.55s tid=0x0000fffeec0f3800 nid=0xf3 waiting on condition  [0x0000fffebc9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-73" #208 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec0f5800 nid=0xf4 waiting on condition  [0x0000fffebc7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-74" #209 prio=5 os_prio=0 cpu=0.16ms elapsed=74.55s tid=0x0000fffeec0f7800 nid=0xf5 waiting on condition  [0x0000fffebc5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-75" #210 prio=5 os_prio=0 cpu=0.31ms elapsed=74.55s tid=0x0000fffeec0f9800 nid=0xf6 waiting on condition  [0x0000fffebc3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-76" #211 prio=5 os_prio=0 cpu=0.21ms elapsed=74.55s tid=0x0000fffeec0fb800 nid=0xf7 waiting on condition  [0x0000fffebc1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-77" #212 prio=5 os_prio=0 cpu=0.26ms elapsed=74.55s tid=0x0000fffeec0fe000 nid=0xf8 waiting on condition  [0x0000fffebbffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-78" #213 prio=5 os_prio=0 cpu=0.31ms elapsed=74.55s tid=0x0000fffeec100000 nid=0xf9 waiting on condition  [0x0000fffebbdfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-79" #214 prio=5 os_prio=0 cpu=0.21ms elapsed=74.55s tid=0x0000fffeec102000 nid=0xfa waiting on condition  [0x0000fffebbbfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-80" #215 prio=5 os_prio=0 cpu=0.20ms elapsed=74.55s tid=0x0000fffeec104000 nid=0xfb waiting on condition  [0x0000fffebb9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-81" #216 prio=5 os_prio=0 cpu=0.31ms elapsed=74.55s tid=0x0000fffeec106000 nid=0xfc waiting on condition  [0x0000fffebb7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-82" #217 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec107800 nid=0xfd waiting on condition  [0x0000fffebb5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-83" #218 prio=5 os_prio=0 cpu=0.18ms elapsed=74.55s tid=0x0000fffeec109800 nid=0xfe waiting on condition  [0x0000fffebb3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-84" #219 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec10b800 nid=0xff waiting on condition  [0x0000fffebb1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-85" #220 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec10e000 nid=0x100 waiting on condition  [0x0000fffebaffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-86" #221 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec110000 nid=0x101 waiting on condition  [0x0000fffebadfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-87" #222 prio=5 os_prio=0 cpu=0.13ms elapsed=74.55s tid=0x0000fffeec112000 nid=0x102 waiting on condition  [0x0000fffebabfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-88" #223 prio=5 os_prio=0 cpu=0.17ms elapsed=74.55s tid=0x0000fffeec114000 nid=0x103 waiting on condition  [0x0000fffeba9fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-89" #224 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec116000 nid=0x104 waiting on condition  [0x0000fffeba7fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-90" #225 prio=5 os_prio=0 cpu=0.28ms elapsed=74.55s tid=0x0000fffeec118000 nid=0x105 waiting on condition  [0x0000fffeba5fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-91" #226 prio=5 os_prio=0 cpu=0.22ms elapsed=74.55s tid=0x0000fffeec11a000 nid=0x106 waiting on condition  [0x0000fffeba3fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-92" #227 prio=5 os_prio=0 cpu=0.17ms elapsed=74.55s tid=0x0000fffeec11c800 nid=0x107 waiting on condition  [0x0000fffeba1fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-93" #228 prio=5 os_prio=0 cpu=0.11ms elapsed=74.55s tid=0x0000fffeec11e800 nid=0x108 waiting on condition  [0x0000fffeb9ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-94" #229 prio=5 os_prio=0 cpu=0.14ms elapsed=74.55s tid=0x0000fffeec120800 nid=0x109 waiting on condition  [0x0000fffeb9dfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-95" #230 prio=5 os_prio=0 cpu=0.22ms elapsed=74.55s tid=0x0000fffeec122800 nid=0x10a waiting on condition  [0x0000fffeb9bfd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-96" #231 prio=5 os_prio=0 cpu=0.18ms elapsed=74.55s tid=0x0000fffeec124800 nid=0x10b waiting on condition  [0x0000fffeb99fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-97" #232 prio=5 os_prio=0 cpu=0.15ms elapsed=74.55s tid=0x0000fffeec126800 nid=0x10c waiting on condition  [0x0000fffeb97fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-98" #233 prio=5 os_prio=0 cpu=0.18ms elapsed=74.55s tid=0x0000fffeec129000 nid=0x10d waiting on condition  [0x0000fffeb95fd000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"waiting-thread-99" #234 prio=5 os_prio=0 cpu=0.46ms elapsed=74.55s tid=0x0000fffeec12b000 nid=0x10e waiting on condition  [0x0000fffeb93fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@11.0.22/Native Method)
+	- parking to wait for  <0x00000000ff0ef2e0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(java.base@11.0.22/LockSupport.java:194)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(java.base@11.0.22/AbstractQueuedSynchronizer.java:885)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.base@11.0.22/AbstractQueuedSynchronizer.java:917)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@11.0.22/AbstractQueuedSynchronizer.java:1240)
+	at java.util.concurrent.locks.ReentrantLock.lock(java.base@11.0.22/ReentrantLock.java:267)
+	at com.github.ishubin.javatroubleshooting.threads.WaitingThread.run(WaitingThread.java:15)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=0 cpu=926.78ms elapsed=285.08s tid=0x0000ffff84189800 nid=0xe runnable  
+
+"GC Thread#0" os_prio=0 cpu=116.17ms elapsed=285.08s tid=0x0000ffff84060000 nid=0x9 runnable  
+
+"GC Thread#1" os_prio=0 cpu=111.01ms elapsed=284.83s tid=0x0000ffff50001800 nid=0x17 runnable  
+
+"GC Thread#2" os_prio=0 cpu=89.48ms elapsed=283.07s tid=0x0000ffff50015000 nid=0x1f runnable  
+
+"GC Thread#3" os_prio=0 cpu=82.28ms elapsed=283.06s tid=0x0000ffff50016800 nid=0x20 runnable  
+
+"GC Thread#4" os_prio=0 cpu=74.33ms elapsed=283.06s tid=0x0000ffff50018000 nid=0x21 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=1.65ms elapsed=285.08s tid=0x0000ffff84068800 nid=0xa runnable  
+
+"G1 Conc#0" os_prio=0 cpu=34.06ms elapsed=285.08s tid=0x0000ffff8406b000 nid=0xb runnable  
+
+"G1 Refine#0" os_prio=0 cpu=1.38ms elapsed=285.08s tid=0x0000ffff840b5000 nid=0xc runnable  
+
+"G1 Young RemSet Sampling" os_prio=0 cpu=126.79ms elapsed=285.08s tid=0x0000ffff840b7000 nid=0xd runnable  
+"VM Periodic Task Thread" os_prio=0 cpu=626.15ms elapsed=283.12s tid=0x0000ffff84d95000 nid=0x1b waiting on condition  
+
+JNI global refs: 18, weak refs: 0
+
