@@ -1,5 +1,6 @@
 import com.github.ishubin.javatroubleshooting.DLThread;
 import com.github.ishubin.javatroubleshooting.encryption.Encrypt;
+import com.github.ishubin.javatroubleshooting.memoryleak.MemoryLeakExample1;
 import com.github.ishubin.javatroubleshooting.messaging.*;
 import com.github.ishubin.javatroubleshooting.threads.BlockingThread;
 import com.github.ishubin.javatroubleshooting.threads.WaitingThread;
@@ -35,8 +36,8 @@ public class App {
         if (message != null) {
             //Sleeping on random time to make it realistic
             ThreadUtil.sleep((long) (Math.random() * 100));
-            consumerLog.info(String.format("[%s] Consuming Message. Topic: %s, Body: %s%n",
-                    Thread.currentThread().getName(), message.getTopic(), message.getMessage()));
+//            consumerLog.info(String.format("[%s] Consuming Message. Topic: %s, Body: %s%n",
+//                    Thread.currentThread().getName(), message.getTopic(), message.getMessage()));
         }
 
     });
@@ -92,11 +93,18 @@ public class App {
         get("/dead-lock", App::deadLock);
         get("/gc", App::runGC);
         get("/decompressor", App::decompressor);
+        get("/memory-leak", App::memoryLeak);
         post("/message", App::postMessage);
 
         startProducerAndConsumer();
 
         System.out.println("Listening on port " + listenPort);
+    }
+
+    private static String memoryLeak(Request req, Response res) throws Exception {
+        int numBytes = Integer.parseInt(req.queryParamOrDefault("size", "1024"));
+        MemoryLeakExample1.run(numBytes);
+        return "Started a memory leaking thread";
     }
 
     private static void startProducerAndConsumer() {

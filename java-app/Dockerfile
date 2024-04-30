@@ -1,4 +1,7 @@
-FROM maven:3.9-eclipse-temurin-11-focal as builder
+#FROM maven:3.9-eclipse-temurin-11-focal as builder
+FROM azul/zulu-openjdk:15-latest as builder
+
+RUN apt update && apt install maven -y  && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app
 
@@ -7,7 +10,7 @@ COPY . /app/
 RUN cd /app && mvn clean package
 
 
-FROM azul/zulu-openjdk:11-latest
+FROM azul/zulu-openjdk:15-latest
 
 ARG JEMALLOC_VERSION=5.3.0
 ARG OTEL_AGENT_VERSION=1.29.0

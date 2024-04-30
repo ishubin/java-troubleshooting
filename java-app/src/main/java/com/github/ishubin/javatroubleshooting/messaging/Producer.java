@@ -43,7 +43,7 @@ public class Producer implements Runnable {
 
             dataQueue.add(generateMessage());
 
-            log.info("Size of the queue is: " + dataQueue.getSize());
+//            log.info("Size of the queue is: " + dataQueue.getSize());
 
             //Sleeping on random time to make it realistic
             ThreadUtil.sleep((long) (Math.random() * 2000 + 100));
@@ -55,8 +55,8 @@ public class Producer implements Runnable {
     private Message generateMessage() {
         int generatedId = (int)(Math.random() * 100000);
         Message message = new Message("default", "Generated message: " + generatedId);
-        log.info(String.format("[%s] Generated Message. Topic: %s, Data: %s%n",
-                Thread.currentThread().getName(), message.getTopic(), message.getMessage()));
+//        log.info(String.format("[%s] Generated Message. Topic: %s, Data: %s%n",
+//                Thread.currentThread().getName(), message.getTopic(), message.getMessage()));
 
         return message;
     }
