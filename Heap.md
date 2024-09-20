@@ -30,3 +30,7 @@ select * from "java.lang.String" s where toString(s).startsWith("user.")
 ```
 select * from ".*" s where s.@usedHeapSize > 53687
 ```
+
+```
+select * from byte[] b where toString(b) like ".*substring.*"
+```
